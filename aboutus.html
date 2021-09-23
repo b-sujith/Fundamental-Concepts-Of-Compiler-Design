@@ -15,13 +15,18 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><a href="./index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></</li>
-            <li class="nav-item"><a href="#" class="nav-link">Menu</a></</li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></</li>
-        </ul>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item "><a href="./index.html" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="#" class="nav-link">About</a></</li>
+                <li class="nav-item"><a href="#" class="nav-link">Menu</a></</li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></</li>
+            </ul>
+        </div>
     </nav>
 
     <header class="jumbotron">
@@ -38,8 +43,12 @@
     </header>
 
     <div class="container">
-        <div>
-            <div>
+        <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active">About Us</li>
+            </ol>
+            <div class="col-12">
                <h3>About Us</h3>
                <hr>
             </div>
