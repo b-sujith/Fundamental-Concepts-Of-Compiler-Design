@@ -74,3 +74,21 @@ body{
     bottom: 0px;
     z-index: 1;
 }
+
+@mixin modal-decorator(){
+    .modal-header {
+        background-color: #6236c9;
+        color: floralwhite;
+        
+        #closebutton {
+            color: floralwhite;
+        }
+    }
+    .modal-body {
+        background-color: #b09ecf;
+    }
+}
+
+#loginmodal,#reservetable{
+    @include modal-decorator();
+}

@@ -32,8 +32,8 @@
                 <li class="nav-item"><a href="./contactus.html" class="nav-link"><i class="fa fa-address-card fa-lg"></i>Contact</a></</li>
                 <li class="nav-item"><a href="./aboutus.html" class="nav-link"><i class="fa fa-info fa-lg"></i>About</a></</li>
             </ul>
-            <span class="navbar-text">
-                <a class="nav-item" data-toggle="modal" data-target="#loginmodal"><i class="fa fa-sign-in"></i> Login</a>
+            <span class="navbar-text" id="login">
+                <a class="nav-item" ><i class="fa fa-sign-in"></i> Login</a>
             </span>
         </div>
     </nav>
@@ -42,7 +42,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" id="closebutton">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -76,7 +76,7 @@
             <div class="modal-content">
                 <div class="modal-header w-100">
                     <h3>Reserve a Table</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" id="closebutton">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -135,7 +135,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 d-flex align-items-center">
-                        <button role="button" id="reserve" data-toggle="modal" class="btn nav-link btn-warning btn-block text-white" data-target="#reservetable"><strong>Reserve Table</strong></button>
+                        <button role="button" id="reserve" class="btn nav-link btn-warning btn-block text-white"><strong>Reserve Table</strong></button>
                 </div>
             </div>
         </div>
@@ -296,8 +296,17 @@
                     $("#carouselButton").addClass('btn-danger');                    
                 }
         });
-        
     });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#reserve').click(function() {
+            $('#reservetable').modal()
+        })
+        $('#login').click(function() {
+            $('#loginmodal').modal()
+        })
+    })
 </script>
 </body>
 
